@@ -32,6 +32,6 @@ class JotServer < Formula
   end
 
   test do
-    assert_match "config", shell_output("#{bin}/jot-server --help 2>&1", 2)
+    assert_match "config", shell_output("#{bin}/jot-server --help 2>&1")
   end
 end

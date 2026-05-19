@@ -1,9 +1,9 @@
 class Jot < Formula
   desc "CLI for the Jot private static-hosting service"
   homepage "https://github.com/skorfmann/jot"
-  url "https://github.com/skorfmann/jot/archive/5235a8d9b7de1023fa0c351c58bf211a02a55c9f.tar.gz"
+  url "https://github.com/skorfmann/jot/archive/4933fab46b68b0a3cf12ee89741496db17a82bf5.tar.gz"
   version "0.1.0"
-  sha256 "f32a8314ed140841e8eab6356cce78e2f0cf70f6ffc2ec9bdedf1df27e9300f6"
+  sha256 "d201526f85e6c7acf6b81b190691a8d4e80d2c5ad78a0b524f6f01c3d5a07e06"
   depends_on "go" => :build
 
   def install

@@ -1,29 +1,29 @@
 class JotServer < Formula
   desc "Server for the Jot private static-hosting service"
   homepage "https://github.com/skorfmann/jot"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_arm do
-      url "https://github.com/skorfmann/jot/releases/download/v0.1.0/jot-server-darwin-arm64"
-      sha256 "780f749b6073b242e74d5d91cd3a3dbb490de8edfdeee479811a0f2728883dd0"
+      url "https://github.com/skorfmann/jot/releases/download/v0.1.1/jot-server-darwin-arm64"
+      sha256 "c78efcd607596227ca36e847e1aa8345b3dfe7449c2e5fd47f3deff46723de80"
     end
 
     on_intel do
-      url "https://github.com/skorfmann/jot/releases/download/v0.1.0/jot-server-darwin-amd64"
-      sha256 "e1fddd8a0efcfd76fec0aa9e204f2efc80440227895f44de00422a1ff0c4feb9"
+      url "https://github.com/skorfmann/jot/releases/download/v0.1.1/jot-server-darwin-amd64"
+      sha256 "289def5a39fc62e9e859370b2a3d3daf6f8ecd7859c8203587ab79fbd2d659f4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/skorfmann/jot/releases/download/v0.1.0/jot-server-linux-arm64"
-      sha256 "55e9201b86f6450e0dd0a866710dc1a3fbb33a39c47d33a71da04c42fbfa71d5"
+      url "https://github.com/skorfmann/jot/releases/download/v0.1.1/jot-server-linux-arm64"
+      sha256 "33a4228ccb5164a2eab9556d70f0dc5488118db23207458733f7ad73c15c078e"
     end
 
     on_intel do
-      url "https://github.com/skorfmann/jot/releases/download/v0.1.0/jot-server-linux-amd64"
-      sha256 "d33d7643fa38dc1fbd09000d18d185518de9c0c46c0a1662606ad625bd39d9b5"
+      url "https://github.com/skorfmann/jot/releases/download/v0.1.1/jot-server-linux-amd64"
+      sha256 "0e339e9a515fab5f12ce4ed29bbcac8be5f0807242d4be868c72f82a96d99b06"
     end
   end
 

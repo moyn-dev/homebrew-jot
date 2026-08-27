@@ -1,29 +1,29 @@
 class Jot < Formula
-  desc "CLI for the Jot private static-hosting service"
-  homepage "https://github.com/skorfmann/jot"
-  version "0.2.0"
+  desc "CLI for the Jot private app platform"
+  homepage "https://github.com/skorfmann/homebrew-jot"
+  version "0.2.1"
 
   on_macos do
     on_arm do
-      url "https://github.com/skorfmann/jot/releases/download/v#{version}/jot-darwin-arm64"
-      sha256 "b647a69d31edf23cb555b9cae830ff1b6a8695ff8c66b65491040a0d2f136cf1"
+      url "https://github.com/skorfmann/homebrew-jot/releases/download/v#{version}/jot-darwin-arm64"
+      sha256 "e15358bf22e629a3144548203a6c13d151367ecc7606e1d1a0b1ee64d2b3cd26"
     end
 
     on_intel do
-      url "https://github.com/skorfmann/jot/releases/download/v#{version}/jot-darwin-amd64"
-      sha256 "416342756dbabb2e57a903326eead59f23337d36d27e8104328c7a3b917d8613"
+      url "https://github.com/skorfmann/homebrew-jot/releases/download/v#{version}/jot-darwin-amd64"
+      sha256 "77adc4d0bc89691b438df9a5a365ff6d9115f41302e4785cb81689476b7dd185"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/skorfmann/jot/releases/download/v#{version}/jot-linux-arm64"
-      sha256 "29d9f06079acc6ae7fba750e75c1fb65c83a5bb4bfe756ed524462f95f018bbc"
+      url "https://github.com/skorfmann/homebrew-jot/releases/download/v#{version}/jot-linux-arm64"
+      sha256 "cdd45f64c2d44ea8555a3819c161cd2062aa2cfe82664390f05e78e24cb517a9"
     end
 
     on_intel do
-      url "https://github.com/skorfmann/jot/releases/download/v#{version}/jot-linux-amd64"
-      sha256 "0d6b6bc24ef0461b81cf0c76f25117f70517da3f14c8424510e082b14d4700c7"
+      url "https://github.com/skorfmann/homebrew-jot/releases/download/v#{version}/jot-linux-amd64"
+      sha256 "6860671587129c80a7ea54c9c27b517844e3c5c085fb5392a161d4bbfcd0a7fb"
     end
   end
 
@@ -34,14 +34,12 @@ class Jot < Formula
   def caveats
     <<~EOS
       This formula installs `jot`, which on macOS shadows the BSD `jot`
-      utility (a number-sequence generator). To use the BSD jot, invoke it as
-      /usr/bin/jot.
+      utility. Invoke /usr/bin/jot when you need the BSD utility.
     EOS
   end
 
   test do
-    output = shell_output("#{bin}/jot --help")
-    assert_match "Push private static artifacts", output
-    assert_match "Examples:", output
+    assert_match "Push private static artifacts", shell_output("JOT_NO_AUTO_UPDATE=1 #{bin}/jot --help")
+    assert_match "jot v#{version}", shell_output("JOT_NO_AUTO_UPDATE=1 #{bin}/jot version")
   end
 end

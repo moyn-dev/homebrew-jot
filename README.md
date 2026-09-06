@@ -3,8 +3,8 @@
 Homebrew tap for Jot.
 
 ```bash
-brew install skorfmann/jot/jot
-brew install skorfmann/jot/jot-server
+brew tap moyn-dev/jot
+brew install moyn-dev/jot/jot
 ```
 
 The formulas are updated from Jot release artifacts.

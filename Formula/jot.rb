@@ -1,29 +1,29 @@
 class Jot < Formula
   desc "CLI for the Jot private app platform"
-  homepage "https://github.com/skorfmann/homebrew-jot"
-  version "0.2.2"
+  homepage "https://github.com/moyn-dev/homebrew-jot"
+  version "0.3.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/skorfmann/homebrew-jot/releases/download/v#{version}/jot-darwin-arm64"
-      sha256 "549a4f61df38bc57bbdd42dafcd0de9293d93742cb62480f02992d09e69c533c"
+      url "https://github.com/moyn-dev/homebrew-jot/releases/download/v#{version}/jot-darwin-arm64"
+      sha256 "a2604e5ec4804ecec2d5a4a63073ad952eb220c05e450dbc95eaa3118faf021b"
     end
 
     on_intel do
-      url "https://github.com/skorfmann/homebrew-jot/releases/download/v#{version}/jot-darwin-amd64"
-      sha256 "1f4857ad8fcaddee3977adc1f919b02b70b91f8d61434b508f34f612848c479b"
+      url "https://github.com/moyn-dev/homebrew-jot/releases/download/v#{version}/jot-darwin-amd64"
+      sha256 "752422d9d4cba8ba38da86d93ca233ddbc1ea196986ce505f00841339b9494c6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/skorfmann/homebrew-jot/releases/download/v#{version}/jot-linux-arm64"
-      sha256 "56d03aeb9dc5e4736b98e6d50761a9a90d86a83e472f46069f358fed9f097958"
+      url "https://github.com/moyn-dev/homebrew-jot/releases/download/v#{version}/jot-linux-arm64"
+      sha256 "4c3d0a6b3af9ad536388d21c4305a6c60610371ed62146a3dbe9d316caa3a0ca"
     end
 
     on_intel do
-      url "https://github.com/skorfmann/homebrew-jot/releases/download/v#{version}/jot-linux-amd64"
-      sha256 "5fc93fedf43dd82271b3f69b7d5ff68b140fb16d279cc55db19239b498acd1b1"
+      url "https://github.com/moyn-dev/homebrew-jot/releases/download/v#{version}/jot-linux-amd64"
+      sha256 "59d8b2c4a7d60307ea2f938785918650e32b0226f70516eb1e1c5f25968f6999"
     end
   end
 
